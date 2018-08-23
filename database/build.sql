@@ -6,10 +6,11 @@ CREATE TABLE users (
   id SERIAL PRIMARY KEY,
   first_name VARCHAR (255),
   surname VARCHAR (255),
-  git_username VARCHAR (255) NOT NULL UNIQUE,
+  age INTEGER,
+  git_username VARCHAR (255)  UNIQUE,
   email VARCHAR (255) UNIQUE,
   CV VARCHAR (6000),
-  photo_url VARCHAR (2083) NOT NULL
+  photo_url VARCHAR (2083) 
 );
 
 COMMIT;
