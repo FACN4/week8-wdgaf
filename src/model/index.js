@@ -1,8 +1,10 @@
-module.exports= [{
-  "name":"Suha",
-  "photo": "https://pbs.twimg.com/profile_images/534123785817829376/UE8T_TQF_400x400.png"
-},
-{
-  "name": "Noor",
-  "photo": "https://pbs.twimg.com/profile_images/534123785817829376/UE8T_TQF_400x400.png"
-}]
+module.exports = [
+  {
+    first_name: 'Suha',
+    photo_url: 'https://avatars3.githubusercontent.com/u/39088518?v=4',
+  },
+  {
+    first_name: 'Noor',
+    photo_url: 'https://avatars1.githubusercontent.com/u/36166288?v=4',
+  },
+];
