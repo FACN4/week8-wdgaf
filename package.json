@@ -1,0 +1,39 @@
+{
+  "name": "week8-wdgaf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test nyc tape testing/* | tap-spec",
+    "dev": "nodemon src/index.js",
+    "coverage": "nyc --reporter=lcov npm run test",
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FACN4/week8-wdgaf.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FACN4/week8-wdgaf/issues"
+  },
+  "homepage": "https://github.com/FACN4/week8-wdgaf#readme",
+  "devDependencies": {
+    "eslint": "^5.4.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "nodemon": "^1.18.3",
+    "nyc": "^12.0.2",
+    "supertest": "^3.1.0",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.9.1",
+    "watch": "^1.0.2"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "pg": "^7.4.3"
+  }
+}
