@@ -14,11 +14,15 @@ const buildDatabase = () => {
     } else {
       gradData.forEach((user) => {
         const QUERYinsertUsers = 'INSERT INTO users (git_username, photo_url) VALUES ($1, $2)';
-        dbConnection.query(QUERYinsertUsers, [user.git_username, user.photo_url], (err) => {
-          if (err) {
-            console.log(err);
-          }
-        });
+        dbConnection.query(
+          QUERYinsertUsers,
+          [user.git_username, user.photo_url],
+          (err) => {
+            if (err) {
+              console.log(err);
+            }
+          },
+        );
       });
     }
   });
