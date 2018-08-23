@@ -32,6 +32,11 @@ main {
   margin: 0 auto;
 }
 
+.main {
+  margin: 0 auto;
+  text-align: center;
+}
+
 /* Header CSS */
 
 header {
