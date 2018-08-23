@@ -1,5 +1,11 @@
-const grads = require('./../model/index.js');
+// const grads = require('./../model/index.js');
+const { getUserData } = require('../model/getUserData');
 
 exports.get = (req, res) => {
-  res.render('portal', { title: 'FAC Grad portal', grads });
+  getUserData((err, profiles) => {
+    if (err) {
+      return res.render('error');
+    }
+    res.render('portal', { title: 'FAC Grad portal', profiles });
+  });
 };
