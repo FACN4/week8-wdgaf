@@ -1,5 +1,31 @@
+body {
+  margin: 0 auto;
+  padding: 0;
+}
+
 .container {
   max-width: 60%;
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+header {
+  text-align: center;
+  border-bottom: #d3d3d3 solid 2px;
+}
+
+header img {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+footer {
+  text-align: center;
+  border-top: #d3d3d3 solid 2px;
+  padding: 6px;
+}
+
+main {
+  width: 80%;
+  margin: 0 auto;
 }
