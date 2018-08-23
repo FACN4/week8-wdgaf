@@ -9,7 +9,7 @@ const eachGraduate = require("./eachGraduate");
 // Add routes
 
 router.get("/", portal.get);
-router.get("/profiles", profiles.get);
 router.get("/profiles/:eachGraduate", eachGraduate.get);
+router.get("/profiles", profiles.get);
 
 module.exports = router;
