@@ -1,2 +1,7 @@
-<h1> {{this.git_username}}</h1>
-<img src="{{this.photo_url}}" />
+<h1>{{this.profiles.first_name}} {{this.profiles.surname}}</h1>
+<div class = 'profile_container'>
+  <div>
+<img src="{{this.profiles.photo_url}}" />
+</div>
+<div>
+<p>{{this.profiles.cv}}</p></div>

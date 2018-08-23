@@ -9,13 +9,16 @@ exports.get = (req, res, next) => {
     let exist = false;
     let tmp = 0;
     profiles.forEach((user, index) => {
-      if (user.git_username == eachGraduate) {
+      if (user.first_name.toLowerCase() == eachGraduate) {
         exist = true;
         tmp = index;
       }
     });
     if (exist) {
-      return res.render('profiles', profiles[tmp]);
+      return res.render('profiles', {
+        profiles: profiles[tmp],
+        title: `${profiles[tmp].first_name} ${profiles[tmp].surname} - FAC Graduate - FAC Portal`,
+      });
     }
     next();
   });

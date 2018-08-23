@@ -1,9 +1,9 @@
-<h1> Meet the grads</h1>
+<h2>Meet the grads</h2>
 <div class = 'container'>
   {{#each profiles}}
     <div class = 'grad_item'>
-      <a href="/profiles/{{this.git_username}}">
-        <p> {{this.git_username}} </p>
+      <a href="/profiles/{{lowercase this.first_name}}">
+        <p>{{this.first_name}} </p>
         <img src = {{this.photo_url}}/>
       </a>
     </div>
