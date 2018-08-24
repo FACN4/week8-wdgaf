@@ -3,7 +3,7 @@
 body {
   margin: 0 auto;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 800;
 }
 
@@ -13,7 +13,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
 }
@@ -39,6 +39,13 @@ main {
 
 /* Header CSS */
 
+.edit {
+  text-align: center;
+  border-top: #000;
+  padding: 10px;
+  background: #2c3e50;
+  color: #fff;
+}
 header {
   text-align: center;
   border-bottom: #d3d3d3 solid 2px;
@@ -48,7 +55,6 @@ header img {
   max-width: 125px;
   max-height: 125px;
 }
-
 /* Leaderboard */
 
 #leaderboardImage {
@@ -64,7 +70,7 @@ header img {
 }
 
 #overlay h2 {
-  padding-top: 30px;
+  padding-top: 20px;
   font-weight: bold;
 }
 
