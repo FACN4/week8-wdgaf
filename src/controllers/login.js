@@ -1,7 +1,4 @@
 const bcrypt = require('bcrypt');
-const qs = require('querystring');
-const { parse } = require('cookie');
-const { sign, verify } = require('jsonwebtoken');
 const { getHash } = require('../queries/getHash');
 
 const { SECRET } = process.env;
