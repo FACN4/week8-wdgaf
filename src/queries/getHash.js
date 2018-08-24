@@ -1,4 +1,4 @@
-const dbConnection = require('../../database/dbconnection');
+const dbConnection = require('../database/dbconnection');
 
 const getHash = (git_username, cb) => {
   dbConnection.query(

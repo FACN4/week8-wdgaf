@@ -5,7 +5,7 @@ const { sign, verify } = require('jsonwebtoken');
 const { getHash } = require('../queries/getHash');
 
 const { SECRET } = process.env;
-const dbConnection = require('../../database/dbconnection');
+const dbConnection = require('../database/dbconnection');
 
 exports.get = (req, res) => {
   res.render('login', { title: 'Login Page' });
