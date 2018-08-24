@@ -1,4 +1,4 @@
-const dbConnection = require('../../database/dbconnection');
+const dbConnection = require('../database/dbconnection');
 
 // Gets everything from the users table and returns it in a callback
 const getUserData = (cb) => {
