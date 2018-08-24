@@ -1,5 +1,10 @@
 <header>
-  <div> <p class:"edit" >Welcome {{this.git_username}} please add/update your cv:</p>
+  {{#if logged_in}}
+    <div> <p class:"edit" >Welcome {{this.git_username}} please add/update your cv:</p>
+    </div>
+  {{else}} <div> <p class:"edit" >Please click <a href = '/login'>here</a> to log in</p>
+  </div>
+  {{/if}}
 
   <a href="../">
   <img src="../images/faclogo.png" alt="FAC Logo" />
