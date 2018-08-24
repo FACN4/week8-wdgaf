@@ -1,4 +1,3 @@
-// const grads = require('./../model/index.js');
 const { getUserData } = require('../model/getUserData');
 
 exports.get = (req, res) => {
