@@ -1,7 +1,11 @@
 const { updateCV } = require('../model/updateUserData');
 
 exports.get = (req, res) => {
-  res.render('editinfo', { title: 'Edit User Profile' });
+  res.render('editinfo', {
+    title: 'Edit User Profile',
+    logged_in: req.session.logged_in,
+    git_username: req.session.git_username,
+  });
 };
 
 exports.post = (req, res) => {

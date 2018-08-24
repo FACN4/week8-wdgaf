@@ -17,7 +17,9 @@ exports.get = (req, res, next) => {
     if (exist) {
       return res.render('profiles', {
         profiles: profiles[tmp],
+        logged_in: req.session.logged_in,
         title: `${profiles[tmp].first_name} ${profiles[tmp].surname} - FAC Graduate - FAC Portal`,
+        git_username: req.session.git_username,
       });
     }
     next();

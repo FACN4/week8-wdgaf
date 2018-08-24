@@ -2,14 +2,14 @@ const { getUserData } = require('../model/getUserData');
 
 exports.get = (req, res) => {
   getUserData((err, profiles) => {
-    console.log(req.session.git_username);
     if (err) {
       return res.render('error');
     }
     return res.render('portal', {
       title: 'FAC Grad portal',
+      logged_in: req.session.logged_in,
       profiles,
-      'req.sesssion.git_username': req.session.git_username,
+      git_username: req.session.git_username,
     });
   });
 };
