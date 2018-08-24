@@ -64,8 +64,8 @@ header {
 }
 
 header img {
-  max-width: 125px;
-  max-height: 125px;
+  max-width: 75px;
+  max-height: 75px;
 }
 /* Leaderboard */
 
@@ -103,6 +103,12 @@ h2 {
 /* Homepage Container CSS */
 
 .container img {
+  max-width: 250px;
+  max-height: 250px;
+  border-radius: 50%;
+}
+
+.profile_container img {
   max-width: 250px;
   max-height: 250px;
   border-radius: 50%;
@@ -169,7 +175,7 @@ footer {
   .profile_container {
     padding: 0px 0px 40px 0px;
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 25% 75%;
     grid-column-gap: 2em;
   }
 
