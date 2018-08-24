@@ -13,7 +13,9 @@ const edit = require('./edit');
 // Add routes
 
 router.get('/', portal.get);
+
 router.get('/loginFailed', loginFailed.get);
+
 router.get('/profiles/:eachGraduate', eachGraduate.get);
 router.get('/login', login.get);
 router.post('/login', login.post);
