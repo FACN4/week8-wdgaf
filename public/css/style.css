@@ -3,7 +3,7 @@
 body {
   margin: 0 auto;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 800;
 }
 
@@ -13,7 +13,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   text-transform: uppercase;
 }
@@ -45,7 +45,18 @@ main {
   padding: 10px;
   background: #2c3e50;
   color: #fff;
+  margin: 0;
 }
+
+.edit p {
+  margin: 0;
+  padding: 0;
+}
+
+.edit a {
+  color: #fff;
+}
+
 header {
   text-align: center;
   border-bottom: #d3d3d3 solid 2px;
@@ -96,6 +107,22 @@ h2 {
   border-radius: 50%;
 }
 
+/* Login and Edit Info */
+
+form input,
+label,
+span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+form input,
+textarea {
+  padding: 10px;
+  width: 100%;
+  border: 1px #d3d3d3 solid;
+}
+
 /* Profile Page CSS */
 
 .profile_container img {
@@ -131,6 +158,11 @@ footer {
     grid-template-columns: 1fr 1fr 1fr;
     text-align: center;
     grid-row-gap: 2em;
+  }
+
+  form {
+    width: 50%;
+    margin: 0 auto;
   }
 
   .profile_container {
