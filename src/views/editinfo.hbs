@@ -1,0 +1,12 @@
+<h1>Update CV for {{this.first_name}} {{this.surname}}</h1>
+
+<form class="fruit-form" action="/edit" method="post">
+        <label class="fruit-form__label" for="name">Name</label>
+        <input class="fruit-form__input" type="text" name="name" id="name"
+          placeholder="Enter fruit name" pattern="[A-Za-z]{2,20}"
+          title="At least two letters" required autocomplete="off">
+        <label class="fruit-form__label" for="image_url">Image URL</label>
+        <input class="fruit-form__input" type="text" name="image_url" id="image_url"
+          placeholder="Enter image url" required autocomplete="off">
+        <input class="fruit-form__btn" type="submit" value="Submit"/>
+</form>
