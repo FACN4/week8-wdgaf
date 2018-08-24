@@ -1,0 +1,10 @@
+<h1>Sign in</h1>
+
+<form class="fruit-form" action="/login" method="post">
+  <label class="login-form__label" for="Git_username">Git username</label>
+  <input class="login-form__input" type="text" name="Git_username" id="Git_username" placeholder="Enter Git username" pattern="[A-Za-z0-9]{2,20}" title="At least two letters" required autocomplete="off">
+  <label class="login-form__label" for="password">password</label>
+  <input class="login-form__input" type="password" name="password" id="password" placeholder="Enter password" required autocomplete="off" >
+  <input class="login-form__btn" type="submit" value="Submit"/>
+  <span> Login Failed. Please try again. </span>
+</form>

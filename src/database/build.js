@@ -1,5 +1,6 @@
 const request = require('request');
 const fs = require('fs');
+const bcrypt = require('bcrypt');
 const gradData = require('./grad_data.json');
 const dbConnection = require('./dbconnection');
 
@@ -13,23 +14,31 @@ const buildDatabase = () => {
       console.log('Building DB error', err);
     } else {
       gradData.forEach((user) => {
-        const QUERYinsertUsers = 'INSERT INTO users (first_name, surname, git_username, photo_url, CV, email) VALUES ($1, $2, $3, $4, $5, $6)';
-        dbConnection.query(
-          QUERYinsertUsers,
-          [
-            user.first_name,
-            user.surname,
-            user.git_username,
-            user.photo_url,
-            user.CV,
-            user.email,
-          ],
-          (err) => {
-            if (err) {
-              console.log(err);
-            }
-          },
-        );
+        bcrypt
+          .hash('password', 10)
+          .then((hashedPassword) => {
+            const QUERYinsertUsers = 'INSERT INTO users (first_name, surname, git_username, photo_url, CV, email, password) VALUES ($1, $2, $3, $4, $5, $6, $7)';
+            dbConnection.query(
+              QUERYinsertUsers,
+              [
+                user.first_name,
+                user.surname,
+                user.git_username,
+                user.photo_url,
+                user.CV,
+                user.email,
+                hashedPassword,
+              ],
+              (err) => {
+                if (err) {
+                  console.log(err);
+                }
+              },
+            );
+          })
+          .catch(() => {
+            console.log('Hashing error');
+          });
       });
     }
   });
