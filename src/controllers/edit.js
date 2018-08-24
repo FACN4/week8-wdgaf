@@ -7,7 +7,7 @@ exports.get = (req, res) => {
 };
 
 exports.post = (req, res) => {
-  updateCV(userId, '', (err) => {
+  updateCV(userId, req.body.cv, (err) => {
     if (err) {
       console.log(err);
     }
