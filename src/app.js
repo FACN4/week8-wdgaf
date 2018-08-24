@@ -3,11 +3,24 @@ const exphbs = require('express-handlebars');
 const path = require('path');
 const favicon = require('serve-favicon');
 const bodyParser = require('body-parser');
+const session = require('express-session');
+const morgan = require('morgan');
+
+const { SECRET } = process.env;
+
 const controllers = require('./controllers/index');
 const helpers = require('./views/helpers');
 
 const app = express();
 
+app.use(
+  session({
+    resave: true,
+    saveUninitialized: true,
+    secret: process.env.SECRET,
+    key: 'user_authentication',
+  }),
+);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.engine(
