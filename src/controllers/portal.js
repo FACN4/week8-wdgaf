@@ -5,6 +5,11 @@ exports.get = (req, res) => {
     if (err) {
       return res.render('error');
     }
-    return res.render('portal', { title: 'FAC Grad portal', profiles });
+    return res.render('portal', {
+      title: 'FAC Grad portal',
+      logged_in: req.session.logged_in,
+      profiles,
+      git_username: req.session.git_username,
+    });
   });
 };
