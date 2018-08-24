@@ -1,3 +1,8 @@
 <footer>
   Copyright &copy; Team WDGAF. All rights reserved.
+  {{#if logged_in}}
+    <form action="/logout" method="get">
+      <input class="logout_btn" type="submit" value="Logout"/>
+    </form>
+  {{/if}}
 </footer>
