@@ -10,7 +10,8 @@ CREATE TABLE users (
   git_username VARCHAR (255) UNIQUE,
   email VARCHAR (255) UNIQUE,
   CV VARCHAR (6000),
-  photo_url VARCHAR (2083)
+  photo_url VARCHAR (2083),
+  password VARCHAR
 );
 
 COMMIT;
