@@ -3,14 +3,14 @@ BEGIN;
 DROP TABLE IF EXISTS users CASCADE;
 
 CREATE TABLE users (
-  id SERIAL PRIMARY KEY,
+  id SERIAL PRIMARY KEY UNIQUE,
   first_name VARCHAR (255),
   surname VARCHAR (255),
   age INTEGER,
-  git_username VARCHAR (255)  UNIQUE,
+  git_username VARCHAR (255) UNIQUE,
   email VARCHAR (255) UNIQUE,
   CV VARCHAR (6000),
-  photo_url VARCHAR (2083) 
+  photo_url VARCHAR (2083)
 );
 
 COMMIT;

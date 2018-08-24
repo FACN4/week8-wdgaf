@@ -13,10 +13,10 @@ const buildDatabase = () => {
       console.log('Building DB error', err);
     } else {
       gradData.forEach((user) => {
-        const QUERYinsertUsers = 'INSERT INTO users (git_username, photo_url) VALUES ($1, $2)';
+        const QUERYinsertUsers = 'INSERT INTO users (first_name, surname, git_username, photo_url, CV) VALUES ($1, $2, $3, $4, $5)';
         dbConnection.query(
           QUERYinsertUsers,
-          [user.git_username, user.photo_url],
+          [user.first_name, user.surname, user.git_username, user.photo_url, user.CV],
           (err) => {
             if (err) {
               console.log(err);
