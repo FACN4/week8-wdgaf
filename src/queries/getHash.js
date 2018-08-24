@@ -5,7 +5,7 @@ const getHash = (git_username, cb) => {
     `SELECT password FROM users WHERE git_username = '${git_username}'`,
     (err, res) => {
       if (err || res.rows.length === 0) {
-        console.log('reject');
+        console.log(err, 'error');
         cb(err);
       } else {
         cb(null, res.rows[0].password);
@@ -13,3 +13,5 @@ const getHash = (git_username, cb) => {
     },
   );
 };
+
+module.exports = { getHash };

@@ -2,7 +2,7 @@ const bcrypt = require('bcrypt');
 const qs = require('querystring');
 const { parse } = require('cookie');
 const { sign, verify } = require('jsonwebtoken');
-const getHash = require('../queries/getHash');
+const { getHash } = require('../queries/getHash');
 
 const { SECRET } = process.env;
 const dbConnection = require('../../database/dbconnection');
@@ -12,21 +12,20 @@ exports.get = (req, res) => {
 };
 
 exports.post = (req, res) => {
-  console.log(req.body.Git_username, req.body.password);
   getHash(req.body.Git_username, (err, hash) => {
     bcrypt
-      .compare(userData.password, hash)
-      .then((res) => {
-        if (res === true) {
+      .compare(req.body.password, hash)
+      .then((result) => {
+        if (result === true) {
           req.session.git_username = req.body.Git_username;
           req.session.logged_in = true;
-          res.redirect('/login');
+          res.redirect('/');
         } else {
-          res.render('loginFailed', { title: 'Login Failed' });
+          res.redirect('/loginFailed');
         }
       })
       .catch((err2) => {
-        res.render('loginFailed', { title: 'Login Failed' });
+        res.redirect('/loginFailed');
       });
   });
 };
