@@ -1,5 +1,7 @@
 # FAC Portal by Suha, Ben & Matt
 
+## >> Our link: https://fac-grads.herokuapp.com/
+
 This week we have built a FAC portal to connect local FACN students to our local recruitment partners, Kav Mashve. The site provides a list of graduates from FACN4 along with a specific profile page for each student and a contact button.
 
 ## Preparation
