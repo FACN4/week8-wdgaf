@@ -1,7 +1,7 @@
 const request = require('request');
 const fs = require('fs');
 const gradData = require('./grad_data.json');
-const dbConnection = require('./dbConnection');
+const dbConnection = require('./dbconnection');
 
 const { GITHUB_KEY } = process.env;
 
@@ -13,10 +13,10 @@ const buildDatabase = () => {
       console.log('Building DB error', err);
     } else {
       gradData.forEach((user) => {
-        const QUERYinsertUsers = 'INSERT INTO users (first_name, surname, git_username, photo_url, CV, password) VALUES ($1, $2, $3, $4, $5, $6)';
+        const QUERYinsertUsers = 'INSERT INTO users (first_name, surname, git_username, photo_url, CV, email) VALUES ($1, $2, $3, $4, $5, $6)';
         dbConnection.query(
           QUERYinsertUsers,
-          [user.first_name, user.surname, user.git_username, user.photo_url, user.CV, 'password'],
+          [user.first_name, user.surname, user.git_username, user.photo_url, user.CV, user.email],
           (err) => {
             if (err) {
               console.log(err);
