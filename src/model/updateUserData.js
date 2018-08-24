@@ -1,4 +1,4 @@
-const dbConnection = require('../../database/dbconnection');
+const dbConnection = require('../database/dbconnection');
 
 // Updates the user's CV, called in controllers/edit.js
 const updateCV = (userId, cv, cb) => {
