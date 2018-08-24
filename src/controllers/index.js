@@ -11,6 +11,7 @@ const edit = require('./edit');
 // Add routes
 
 router.get('/', portal.get);
+
 router.get('/profiles/:eachGraduate', eachGraduate.get);
 router.get('/edit', edit.get);
 router.get('/profiles', (req, res) => res.redirect('/'));
