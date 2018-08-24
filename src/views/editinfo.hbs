@@ -1,13 +1,9 @@
 <h1>Update CV</h1>
 
 <form class="update-form" action="/edit" method="post">
-        <!-- <label class="update-info__label" for="image_url">Image URL</label>
-        <input class="update-info__input" type="url" name="image_url" id="image_url"
-          placeholder="Enter image url" autocomplete="off" pattern="(https?:\/\/.*\.(?:png|jpg|gif))">
-          <hr /> -->
         <label class="update-info__label" for="cv">CV</label>
         <textarea class="update-info__input" type="text" name="cv" id="cv"
-          placeholder="Enter updated CV information" autocomplete="off"></textarea>
+          placeholder="Enter updated CV information" autocomplete="off" required  pattern="[a-zd.]{5,}"></textarea>
           <hr />
         <input class="update-info__btn" type="submit" value="Submit"/>
 </form>
