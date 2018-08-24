@@ -1,4 +1,3 @@
-// const grads = require('./../model/index.js');
 const { getUserData } = require('../model/getUserData');
 
 exports.get = (req, res) => {
@@ -6,6 +5,6 @@ exports.get = (req, res) => {
     if (err) {
       return res.render('error');
     }
-    res.render('portal', { title: 'FAC Grad portal', profiles });
+    return res.render('portal', { title: 'FAC Grad portal', profiles });
   });
 };
