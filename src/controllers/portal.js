@@ -6,6 +6,6 @@ exports.get = (req, res) => {
     if (err) {
       return res.render('error');
     }
-    res.render('portal', { title: 'FAC Grad portal', profiles });
+    return res.render('portal', { title: 'FAC Grad portal', profiles });
   });
 };
