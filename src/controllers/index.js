@@ -13,6 +13,7 @@ const edit = require('./edit');
 router.get('/', portal.get);
 router.get('/profiles/:eachGraduate', eachGraduate.get);
 router.get('/edit', edit.get);
+router.get('/profiles', (req, res) => res.redirect('/'));
 router.post('/edit', edit.post);
 router.use(error.client);
 router.use(error.server);
