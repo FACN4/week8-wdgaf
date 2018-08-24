@@ -19,7 +19,6 @@ exports.post = (req, res) => {
     if (err) {
       console.log(err);
     }
-    console.log('Success');
-    res.redirect('/edit');
+    res.redirect('/');
   });
 };
